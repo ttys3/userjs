@@ -30,7 +30,7 @@
             });
 
         // https://golang.org/src/*  : pre
-        document.querySelectorAll('div.container pre').
+        document.querySelectorAll('.container pre').
             forEach(function(e) {
                 e.classList.add(...classesToAdd);
             });
