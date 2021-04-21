@@ -66,6 +66,25 @@ const html = Prism.highlight(e.innerText, Prism.languages.rust, 'rust');
 
     setTimeout( () => {
 
+  const s = document.createElement( 'script' );
+  s.setAttribute( 'src', 'https://cdn.jsdelivr.net/gh/ttys3/userjs@v0.1.5/static/js/prismjs/packtpub.com/prism.js' );
+  document.body.appendChild( s );
+
+
+const linkElement = document.createElement('link');
+linkElement.setAttribute('rel', 'stylesheet');
+linkElement.setAttribute('type', 'text/css');
+linkElement.setAttribute('href', 'https://cdn.jsdelivr.net/gh/ttys3/userjs@v0.1.5/static/js/prismjs/packtpub.com/prism.css');
+document.body.appendChild( linkElement );
+
+const fixupCodeStyle = document.createElement('style')
+fixupCodeStyle.innerText = `pre[class*=language-]>code {
+    border-top: 16px solid transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+}`
+document.head.appendChild(fixupCodeStyle)
+
         document.addEventListener("click", (e) => {
             doHightLight(e.target);
         });
@@ -98,7 +117,7 @@ observer.observe(targetNode, config);
 
 // Later, you can stop observing
 // observer.disconnect();
-    }, 5000);
+    }, 1000);
 
 })();
 
