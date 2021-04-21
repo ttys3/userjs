@@ -1,14 +1,14 @@
 // ==UserScript==
 // @name         Packtpub Syntax Highlighter
 // @namespace    https://ttys3.dev
-// @version      v0.1.3
+// @version      v0.1.0
 // @description  add Syntax highlighter for https://beta.packtpub.com/
 // @author       荒野無燈
-// @updateURL    
+// @updateURL    https://cdn.jsdelivr.net/gh/ttys3/userjs@main/packtpub-syntax-highlighter.user.js
 // @match        https://beta.packtpub.com/*
 // @match        https://subscription.packtpub.com/book/*
-// @require      https://cdn.jsdelivr.net/gh/ttys3/userjs@v0.1.3/static/js/prismjs/blog.golang.org/prism.js
-// @resource     prismcss  https://cdn.jsdelivr.net/gh/ttys3/userjs@v0.1.3/static/js/prismjs/blog.golang.org/prism.css
+// @require      https://cdn.jsdelivr.net/gh/ttys3/userjs@main/static/js/prismjs/packtpub.com/prism.js
+// @resource     prismcss  https://cdn.jsdelivr.net/gh/ttys3/userjs@main/static/js/prismjs/packtpub.com/prism.css
 // @grant        GM_addStyle
 // @grant        GM_getResourceText
 
@@ -17,6 +17,9 @@
 (function() {
     'use strict';
     GM_addStyle(GM_getResourceText('prismcss'));
+
+
+
 
     const doHightLight = (e) => {
         if (!e.classList) {
