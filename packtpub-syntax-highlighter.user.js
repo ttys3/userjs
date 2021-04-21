@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Packtpub Syntax Highlighter
 // @namespace    https://ttys3.dev
-// @version      v0.1.0
+// @version      v0.1.1
 // @description  add Syntax highlighter for https://beta.packtpub.com/
 // @author       荒野無燈
 // @updateURL    https://cdn.jsdelivr.net/gh/ttys3/userjs@main/packtpub-syntax-highlighter.user.js
@@ -48,7 +48,7 @@
                 // ES6 spread operator
                 e.classList.add(...classesToAdd);
         // Returns a highlighted HTML string
-const html = Prism.highlight(e.innerText, Prism.languages.clike, 'clike');
+const html = Prism.highlight(e.innerText, Prism.languages.rust, 'rust');
                 e.innerHTML = html;
             console.log(e.innerText);
             e.classList.remove("language-markup");
